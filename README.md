@@ -1,11 +1,11 @@
 # Project description
 
-This is a project with Dockerized simple web site.
+This is a project with Dockerized simple web page.
 
 ## Functionality 
 
-The website is hosted locally at the port 5000.
-The website greets you when you provide your name in the url like:
+If you run the python app, the web page would be hosted locally at the port 5000.
+The web page greets you when you provide your name in the url like:
 `localhost:5000/hello/<your name>`
 
 ## Building and running the docker image
