@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v4
     
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag my-image-name:1.0.0
     
     - name: Run tests
       run: echo "Test"
@@ -25,7 +25,7 @@ jobs:
     - name: Scan Docker image with Trivy
       uses: aquasecurity/trivy-action@master
       with:
-        image-ref: my-image-name:latest
+        image-ref: my-image-name:1.0.0
         format: table 
         exit-code: 1 # Fails the workflow if vulnerabilities are found
         severity: HIGH,CRITICAL
