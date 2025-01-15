@@ -1,7 +1,6 @@
 #!/usr/bin/env python 
 
 from flask import Flask
-import pandas
 import math
 
 app = Flask(__name__)
