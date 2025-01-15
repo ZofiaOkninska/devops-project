@@ -1,5 +1,6 @@
 # syntax=docker/dockerfile:1
 
+# select base image to use
 FROM python:3.9.20
 
 # create working directiory in the container
