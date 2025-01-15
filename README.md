@@ -6,7 +6,7 @@ This is a project with Dockerized simple web page.
 
 If you run the python app, the web page would be hosted locally at the port 5000.
 The web page greets you when you provide your name in the url like:
-`localhost:5000/hello/<your name>`
+`localhost:5001/hello/<your name>`
 
 ## Building and running the docker image
 
@@ -16,7 +16,7 @@ Remember to redirect port outside of the container to be able to do so.
 1. Build the image: 
 `docker build --file Dockerfile --tag project_web_app:1.0.0 .`
 2. Run with port redirection: 
-`docker run --rm -it -p <your desired port>:5000 project_web_app:1.0.0`
+`docker run --rm -it -p <your desired port>:5001 project_web_app:1.0.0`
 3. Test url in the browser: 
 `localhost:<your desired port>/hello/<your name>`
 or via linux tool lynx:

@@ -16,7 +16,7 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 COPY web-app.py /web-app/
 
 # set port on which Django server is to be exposed
-EXPOSE 5000 
+EXPOSE 5001
 
 # run the web-application from the cli
 CMD [ "python3", "web-app.py"]
