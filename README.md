@@ -13,6 +13,8 @@ The web page greets you when you provide your name in the url like:
 You can build the image and then run it to see the results in the browser. 
 Remember to redirect port outside of the container to be able to do so.
 
+Steps: 
+
 1. Build the image: 
 `docker build --file Dockerfile --tag project_web_app:1.0.0 .`
 2. Run with port redirection: 
