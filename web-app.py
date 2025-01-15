@@ -11,6 +11,10 @@ app = Flask(__name__)
 def hello_name(name) :
 	return 'Hello %s!' % name
 
+@app.route('/goodbye/<name>')
+def goodbye_name(name) :
+	return 'Goodbye %s!' % name
+
 @app.route('/')
 # '/' URL is bound with hello_world() function.
 def hello_world():
