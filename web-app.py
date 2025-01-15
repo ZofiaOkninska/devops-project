@@ -1,6 +1,7 @@
 #!/usr/bin/env python 
 
 from flask import Flask
+import pandas
 
 app = Flask(__name__)
 
