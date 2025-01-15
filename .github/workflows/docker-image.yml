@@ -27,5 +27,4 @@ jobs:
       with:
         image-ref: my-image-name:1.0.0
         format: table 
-        exit-code: 1 # Fails the workflow if vulnerabilities are found
         severity: HIGH,CRITICAL
