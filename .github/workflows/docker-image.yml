@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  build:
+  build-test-scan:
 
     runs-on: ubuntu-latest
 
@@ -17,30 +17,15 @@ jobs:
     
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-
-  test:
-
-      runs-on: ubuntu-latest
-
-      steps:
-
-      - name: Checkout the code
-        uses: actions/checkout@v4
     
-      - name: Run tests
-        run: echo "Test"
+    - name: Run tests
+      run: echo "Test"
 
-  scan:
-
-      runs-on: ubuntu-latest
-
-      steps:
-
-      # Scan the Docker image with Trivy
-      - name: Scan Docker image with Trivy
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: my-image-name:latest
-          format: table 
-          exit-code: 1 # Fails the workflow if vulnerabilities are found
-          severity: HIGH,CRITICAL
+    # Scan the Docker image with Trivy
+    - name: Scan Docker image with Trivy
+      uses: aquasecurity/trivy-action@master
+      with:
+        image-ref: my-image-name:latest
+        format: table 
+        exit-code: 1 # Fails the workflow if vulnerabilities are found
+        severity: HIGH,CRITICAL
